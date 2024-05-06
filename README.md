@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # ***Проєкт "Бджілка"***
 
 ![Logo](/app/assets/images/logo.svg)
