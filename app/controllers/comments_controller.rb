@@ -8,10 +8,6 @@ class CommentsController < ApplicationController
 
   # GET /comments/1 or /comments/1.json
   def show
-<<<<<<< HEAD
-
-=======
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
   end
 
   # GET /comments/new
@@ -20,12 +16,7 @@ class CommentsController < ApplicationController
   end
 
   # GET /comments/1/edit
-<<<<<<< HEAD
   def edit 
-  
-=======
-  def edit
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
   end
 
   # POST /comments or /comments.json
@@ -36,21 +27,12 @@ class CommentsController < ApplicationController
 
     @order = Order.find(params[:order_id])
     @comment = @order.comments.new(comment_params)
-<<<<<<< HEAD
     @comment.created_at = DateTime.current 
 
     respond_to do |format|
       if @comment.save
         #format.html { redirect_to comment_url(@comment), notice: 'Comment was successfully created.' }
         format.html { redirect_to order_url(@comment.order_id), notice: 'Comment was successfully created' }
-=======
-    @comment.created_at = DateTime.current
-
-    respond_to do |format|
-      if @comment.save
-        # format.html { redirect_to comment_url(@comment), notice: 'Comment was successfully created.' }
-        format.html { redirect_to order_url(@comment.order_id), notice: t("comm-create") }
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
         format.json { render :show, status: :created, location: @comment }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -77,11 +59,7 @@ class CommentsController < ApplicationController
     @comment.destroy!
 
     respond_to do |format|
-<<<<<<< HEAD
       format.html { redirect_to order_url(@comment.order_id), notice: 'Comment was successfully destroyed' }
-=======
-      format.html { redirect_to order_url(@comment.order_id), notice: t("comm-delete") }
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
       format.json { head :no_content }
     end
   end

@@ -13,11 +13,8 @@ class ClientProfile < ApplicationRecord
   validates :last_name, presence: true
   validates :phone, presence: true
 
-<<<<<<< HEAD
   has_one_attached :avatar
 
-=======
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
   def self.ransackable_associations(auth_object = nil)
     ["client", "client_likes", "orders", "services"]
   end
@@ -25,7 +22,6 @@ class ClientProfile < ApplicationRecord
   def self.ransackable_attributes(auth_object = nil)
     ["client_id", "created_at", "first_name", "id", "id_value", "last_name", "phone", "updated_at"]
   end
-<<<<<<< HEAD
 
   def self.ransackable_attributes(auth_object = nil)
     super + ['avatar_attachment_id'] 
@@ -51,6 +47,4 @@ class ClientProfile < ApplicationRecord
   #   ["client_id", "created_at", "currency_type", "first_name", "id", "id_value", "last_name", "phone", "updated_at"]
   # end
 
-=======
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
 end

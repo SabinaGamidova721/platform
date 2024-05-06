@@ -26,11 +26,7 @@ class ClientLikesController < ApplicationController
 
     respond_to do |format|
       if @client_like.save
-<<<<<<< HEAD
         format.html { redirect_to client_like_url(@client_like), notice: "Client like was successfully created." }
-=======
-        format.html { redirect_to client_like_url(@client_like), notice: t("cli-like-create") }
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
         format.json { render :show, status: :created, location: @client_like }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -43,11 +39,7 @@ class ClientLikesController < ApplicationController
   def update
     respond_to do |format|
       if @client_like.update(client_like_params)
-<<<<<<< HEAD
         format.html { redirect_to client_like_url(@client_like), notice: "Client like was successfully updated." }
-=======
-        format.html { redirect_to client_like_url(@client_like), notice: t("cli-like-update") }
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
         format.json { render :show, status: :ok, location: @client_like }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -61,11 +53,7 @@ class ClientLikesController < ApplicationController
     @client_like.destroy!
 
     respond_to do |format|
-<<<<<<< HEAD
       format.html { redirect_to client_likes_url, notice: "Client like was successfully destroyed." }
-=======
-      format.html { redirect_to client_likes_url, notice: t("cli-like-delete") }
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
       format.json { head :no_content }
     end
   end

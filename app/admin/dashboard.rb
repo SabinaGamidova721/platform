@@ -1,8 +1,4 @@
 # frozen_string_literal: true
-<<<<<<< HEAD
-=======
-
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
 ActiveAdmin.register_page "Dashboard" do
   menu priority: 1, label: proc { I18n.t("active_admin.dashboard") }
 

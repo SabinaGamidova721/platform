@@ -31,11 +31,6 @@ class DeviseCreateAdminUsers < ActiveRecord::Migration[7.1]
       # t.integer  :failed_attempts, default: 0, null: false # Only if lock strategy is :failed_attempts
       # t.string   :unlock_token # Only if unlock strategy is :email or :both
       # t.datetime :locked_at
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
       t.timestamps null: false
     end
 

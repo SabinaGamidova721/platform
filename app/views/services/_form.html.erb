@@ -12,25 +12,16 @@
   <% end %>
 
   <div class="field mt">
-<<<<<<< HEAD
     <%= form.label :title, t('services_data.service_name'), style: "display: block" %>
-=======
-    <%= form.label t("title"), style: "display: block" %>
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
     <%= form.text_field :title, class: 'form-text-field'  %>
   </div>
 
   <div class="field mt">
-<<<<<<< HEAD
     <%= form.label :service_type, t('services_data.service_type_name'), style: "display: block" %>
-=======
-    <%= form.label t("serv-type"), style: "display: block" %>
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
     <%= form.text_field :service_type, class: 'form-text-field'  %>
   </div>
 
   <div class="field mt">
-<<<<<<< HEAD
     <%= form.label :difficulty_id, t("services_data.service.difficulty"), style: "display: block" %>
     <% options = Difficulty.all.map { |d| [I18n.exists?("difficulty.difficulty_titles.#{d.title.parameterize.underscore}", locale: :uk) ? t("difficulty.difficulty_titles.#{d.title.parameterize.underscore}") : d.title, d.id] } %>
     <%= form.select :difficulty_id, options_for_select(options, prompt: 'Select difficulty'), {}, class: 'form-text-field', style: "width: 300px;" %>
@@ -39,19 +30,11 @@
   <div class="field mt">
     <%= form.label :description, t('services_data.service.description'), style: "display: block" %>
     <%= form.text_area :description, class: 'form-text-area'  %>
-=======
-    <%= form.label t("difficulty"), style: "display: block" %>
-    <%= form.select :difficulty_id, options_for_select(Difficulty.all.map { |d| [d.title, d.id] }, prompt: 'Select difficulty'), {}, class: 'form-text-field', style: 'width: 300px;' %>
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
   </div>
 
   <%= form.hidden_field :employee_profile_id, value:current_employee.id %>
 
   <div class="field mt">
-<<<<<<< HEAD
     <%= form.submit t('save'), class: 'button button-main' %>
-=======
-    <%= form.submit t("create-service"), class: 'button button-main' %>
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
   </div>
 <% end %>

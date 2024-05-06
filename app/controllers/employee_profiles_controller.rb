@@ -9,13 +9,10 @@ class EmployeeProfilesController < ApplicationController
 
   # GET /employee_profiles/1 or /employee_profiles/1.json
   def show
-<<<<<<< HEAD
     # orders = Order.where(employee_profile_id: @employee_profile.id, status_id: Status.find_by(title: "Done").id)
     # average_rating = orders.average(:rating)
     # average_rating ||= 0
     # @employee_profile.update(rating: average_rating)
-=======
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
   end
 
   # GET /employee_profiles/new

@@ -57,13 +57,7 @@ Rails.application.routes.draw do
 
   get 'calendar', to: "client_profiles#calendar", as: 'calendar'
   get 'employee_calendar', to: "employee_profiles#calendar", as: 'employee_calendar'
-<<<<<<< HEAD
   get 'exchange', to: 'index#exchange', as: :exchange
-
   #get '/change_locale/:lang', to: 'application#change_locale', as: 'change_locale'
-
-=======
-
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
   get "up" => "rails/health#show", as: :rails_health_check
 end

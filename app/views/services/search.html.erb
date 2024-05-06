@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div class="container">
   <h2 class="title-lg mb"><%= t('services') %></h2>
   <p style="color: green"><%= notice %></p>
@@ -19,26 +18,4 @@
   <div class="field mt-ls">
     <%= link_to t('back_to_main'), root_path, class: 'button button-yellow' %>
   </div>
-=======
-<div class="container">
-  <h2 class="title-lg mb"><%= t("services") %></h2>
-  <p style="color: green"><%= notice %></p>
-
-  <% @services.each_with_index do |service, index| %>
-    <br>
-    <div class="user-card mt-ls">
-      <%= render service %>
-    </div>
-    
-    <div class="mt-md ml-bt">  
-      <%= link_to t("show-more"), service_path(service.id), class: 'button button-main' %>
-    </div>
-
-  <% end %>
-  
-  <br>
-  <div class="field mt-ls">
-    <%= link_to t("back-main-page"), root_path, class: 'button button-yellow' %>
-  </div>
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
 </div>

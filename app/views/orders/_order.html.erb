@@ -1,5 +1,4 @@
 <div id="<%= dom_id order %>">
-<<<<<<< HEAD
   
   <div class="mt-md">
     <strong><%= t('orders_data.order.status') %>:</strong>
@@ -12,26 +11,12 @@
 
   <div class="mt-md">
     <strong><%= t('orders_data.order.client') %>:</strong>
-=======
-  <p>
-    <strong><%= t("status")%>:</strong>
-    <%= Status.find_by(id: order.status_id).title %>
-  </p>
-
-  <p>
-    <strong><%= t("client")%>:</strong>
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
     <%= ClientProfile.find_by(id: order.client_profile_id)&.first_name %>
     <%= ClientProfile.find_by(id: order.client_profile_id)&.last_name %>
   </div>
 
-<<<<<<< HEAD
   <div class="mt-md">
     <strong><%= t('orders_data.order.employee') %>:</strong>
-=======
-  <p>
-    <strong><%= t("employee")%>:</strong>
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
     <%= EmployeeProfile.find_by(id: order.employee_profile_id)&.first_name %>
     <%= EmployeeProfile.find_by(id: order.employee_profile_id)&.last_name %>
   </div>
@@ -45,7 +30,6 @@
     <% end %>
   </div>
 
-<<<<<<< HEAD
   <div class="mt-md">
     <strong><%= t('orders_data.order.date_order') %>:</strong>
     <%= order.date_order.to_date  %>
@@ -70,27 +54,6 @@
       <% end %>
     </div>
   </div>
-=======
-  <p>
-    <strong><%= t("urgency")%>:</strong>
-    <%= Urgency.find_by(id: order.urgency_id).title %>
-  </p>
-
-  <p>
-    <strong><%= t("date-order")%>:</strong>
-    <%= l(order.date_order.to_date, format: :default)  %>
-  </p>
-
-  <p>
-    <strong><%= t("service")%>:</strong>
-    <%= Service.find_by(id: order.service_id).title %>
-  </p>
-
-  <p>
-    <strong><%= t("price")%>:</strong>
-    <%= "#{order.price} $" %>
-  </p>
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
 
   <div class="mt-md">
     <strong><%= t('orders_data.order.price') %>:</strong>

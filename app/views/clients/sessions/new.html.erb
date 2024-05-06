@@ -1,9 +1,5 @@
 <div class="container">
-<<<<<<< HEAD
   <h2 class="title-lg mb"><%= t("log_in.title") %></h2>
-=======
-  <h2 class="title-lg mb"><%= t("log-in")%></h2>
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="field mt">
       <%= f.label :email %><br />
@@ -11,31 +7,19 @@
     </div>
   
     <div class="field mt">
-<<<<<<< HEAD
       <%= f.label :password, t('devise_fields.password') %><br />
-=======
-      <%= f.label t("ent-password") %><br />
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
       <%= f.password_field :password, autocomplete: "current-password", class: 'form-text-field'  %>
     </div>
   
     <% if devise_mapping.rememberable? %>
       <div class="field mt">
         <%= f.check_box :remember_me %>
-<<<<<<< HEAD
         <%= f.label :remember_me, t('log_in.remember_me') %>
-=======
-        <%= f.label t("remember-me") %>
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
       </div>
     <% end %>
   
     <div class="actions field mt">
-<<<<<<< HEAD
       <%= f.submit t('log_in_button'), class: 'button button-main' %>
-=======
-      <%= f.submit "#{t("log-in")}", class: 'button button-main' %>
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
     </div>
   <% end %>
   

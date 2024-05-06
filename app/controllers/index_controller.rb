@@ -31,15 +31,4 @@ class IndexController < ApplicationController
     response = Net::HTTP.get(uri)
     JSON.parse(response)
   end
-<<<<<<< HEAD
-=======
-
-  # def get_exchange_rates
-  #   source = 'https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5'
-  #   resp = Net::HTTP.get_response(URI.parse(source))
-  #   data = resp.body
-  #   result = JSON.parse(data)
-  #   return result
-  # end
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
 end

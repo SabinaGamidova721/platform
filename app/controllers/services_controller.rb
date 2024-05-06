@@ -27,7 +27,6 @@ class ServicesController < ApplicationController
   end
 
   def search
-<<<<<<< HEAD
     if params[:q].present?
       search_term = params[:q]
 
@@ -44,13 +43,6 @@ class ServicesController < ApplicationController
     else
       @services = []
     end
-=======
-    @services = if params[:q].present?
-                  Service.where("title LIKE ?", "%" + params[:q] + "%")
-                else
-                  []
-                end
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
   end
 
   def find_matching_services(search_term, services_file)
@@ -82,11 +74,7 @@ class ServicesController < ApplicationController
 
     respond_to do |format|
       if @service.save
-<<<<<<< HEAD
         format.html { redirect_to service_url(@service), notice: "Service was successfully created." }
-=======
-        format.html { redirect_to service_url(@service), notice: t("serv-create") }
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
         format.json { render :show, status: :created, location: @service }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -99,11 +87,7 @@ class ServicesController < ApplicationController
   def update
     respond_to do |format|
       if @service.update(service_params)
-<<<<<<< HEAD
         format.html { redirect_to service_url(@service), notice: "Service was successfully updated." }
-=======
-        format.html { redirect_to service_url(@service), notice: t("serv-update") }
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
         format.json { render :show, status: :ok, location: @service }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -117,11 +101,7 @@ class ServicesController < ApplicationController
     @service.destroy!
 
     respond_to do |format|
-<<<<<<< HEAD
       format.html { redirect_to services_url, notice: "Service was successfully destroyed." }
-=======
-      format.html { redirect_to services_url, notice: t("serv-delete") }
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
       format.json { head :no_content }
     end
   end

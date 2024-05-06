@@ -14,9 +14,4 @@ ActiveAdmin.register EmployeeProfile do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
-<<<<<<< HEAD
-  
-=======
-
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
 end

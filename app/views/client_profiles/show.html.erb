@@ -27,17 +27,10 @@
         </div>
 
         <div class="mt-ls">
-<<<<<<< HEAD
           <%= link_to t('.edit'), edit_client_profile_path, class: 'button button-yellow' %>
           <%= link_to t('.show_orders'), orders_sorted_by_date_path(client_profile_id: @client_profile.id), class: 'button button-yellow'%>
           <%= link_to t('.show_favourites'), client_likes_path(@client_likes), class: 'button button-yellow'%>    
           <%= link_to t('back_to_main'), root_path, class: 'button button-yellow' %>
-=======
-          <%= link_to t('edit-profile-cli'), edit_client_profile_path, class: 'button button-yellow' %>
-          <%= link_to t('show-my-orders'), orders_path(client_profile_id: @client_profile.id), class: 'button button-yellow'%>
-          <%= link_to t("show-fav"), client_likes_path(@client_likes), class: 'button button-yellow'%>
-          <%= link_to t('back-main-page'), root_path, class: 'button button-yellow' %>
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
         </div>    
     </div>
       

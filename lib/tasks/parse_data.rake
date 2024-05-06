@@ -64,32 +64,18 @@ end
 
   namespace :add do
     desc "Add data to specialization"
-<<<<<<< HEAD
     task :specialization_data => :environment do
       titles = ["Tutor", "Locksmith", "Cook"]
       successes = 0
   
       titles.each do |title|
         specialization = Specialization.find_or_create_by(title: title)
-=======
-    task specialization_data: :environment do
-      titles = ["Tutor", "Locksmith", "Cook"]
-      successes = 0
-
-      titles.each do |title|
-        specialization = Specialization.find_or_create_by(title:)
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
         if specialization.persisted?
           successes += 1
         else
           puts "Failed to add specialization: #{title}"
         end
       end
-<<<<<<< HEAD
-  
-=======
-
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
       if successes == titles.length
         puts "Specializations added successfully"
       else
@@ -98,7 +84,6 @@ end
     end
   end
 
-<<<<<<< HEAD
   
   namespace :add do
     desc "Add data to urgency"
@@ -108,27 +93,13 @@ end
   
       titles.each do |title|
         urgency = Urgency.create(title: title)
-=======
-  namespace :add do
-    desc "Add data to urgency"
-    task urgency_data: :environment do
-      titles = ["Critical", "Urgent", "Normal", "Non-urgent"]
-      successes = 0
 
-      titles.each do |title|
-        urgency = Urgency.create(title:)
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
         if urgency.persisted?
           successes += 1
         else
           puts "Failed to add urgency: #{title}"
         end
       end
-<<<<<<< HEAD
-  
-=======
-
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
       if successes == titles.length
         puts "Urgencies added successfully"
       else
@@ -137,7 +108,6 @@ end
     end
   end
 
-<<<<<<< HEAD
   
   namespace :add do
     desc "Add data to comment"
@@ -195,89 +165,3 @@ end
   #   end
   # end
   
-  
-  
-=======
-  # namespace :add do
-  #   desc "Add data to comment"
-  #   task :comment_data => :environment do
-  #     contents = ["Hello1", "Hello2", "Hello3", "Hello4"]
-  #     successes = 0
-
-  #     contents.each do |content|
-  #       comment = Comment.create(content: content)
-  #       if comment.persisted?
-  #         successes += 1
-  #       else
-  #         puts "Failed to add comment: #{content}"
-  #       end
-  #     end
-
-  #     if successes == contents.length
-  #       puts "Comments added successfully"
-  #     else
-  #       puts "Some comments failed to add"
-  #     end
-  #   end
-  # end
-
-  namespace :add do
-    desc "Add data to status"
-    task status_data: :environment do
-      titles = ["Done", "In Progress", "Approved", "Not Approved"]
-      successes = 0
-
-      titles.each do |title|
-        status = Status.create(title:)
-        if status.persisted?
-          successes += 1
-        else
-          puts "Failed to add status: #{title}"
-        end
-      end
-
-      if successes == titles.length
-        puts "Statuses added successfully"
-      else
-        puts "Some statuses failed to add"
-      end
-    end
-  end
-
-# namespace :add do
-#   desc "Add data to status"
-#   task :status_data => :environment do
-#     Status.create(title: "Done")
-#     Status.create(title: "In Progress")
-#     Status.create(title: "Not Done")
-#   end
-# end
-
-# namespace :add do
-#   desc "Add data to urgency"
-#   task :urgency_data => :environment do
-#     Urgency.create(title: "Critical")
-#     Urgency.create(title: "Urgent")
-#     Urgency.create(title: "Normal")
-#     Urgency.create(title: "Non-urgent")
-#   end
-# end
-
-# namespace :add do
-#   desc "Add data to comment"
-#   task :comment_data => :environment do
-#     Comment.create(content: "Hello1")
-#     Comment.create(content: "Hello2")
-#     Comment.create(content: "Hello3")
-#     Comment.create(content: "Hello4")
-#   end
-# end
-
-# namespace :db do
-#   desc "Clear the services table"
-#   task clear_services: :environment do
-#     Service.destroy_all
-#     # puts "Services table has been cleared"
-#   end
-# end
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb

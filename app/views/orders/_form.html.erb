@@ -21,7 +21,6 @@
   <% end %>
 
   <div class="field mt">
-<<<<<<< HEAD
     <%= link_to t("orders_data.form.select_employee"), employee_profiles_path, class: 'button button-yellow mr-sm' %>
   </div>
 
@@ -33,23 +32,10 @@
 
   <div class="field mt">
     <%= form.label :date_order, t("orders_data.form.date_order"), style: "display: block" %>
-=======
-    <%= link_to t("select-emp"), employee_profiles_path, class: 'button button-yellow mr-sm' %>
-  </div>
-
-  <div class="field mt">
-    <%= form.label t("urgency"), style: "display: block" %>
-    <%= form.select :urgency_id, options_for_select(Urgency.all.map { |d| [d.title, d.id] }, prompt: 'Select urgency'), {}, class: 'form-text-field', style: "width: 300px;" %>
-  </div>
-
-  <div class="field mt">
-    <%= form.label t("date-order"), style: "display: block" %>
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
     <%= form.date_field :date_order, class: 'form-text-field' %>
   </div>
 
   <div class="field mt">
-<<<<<<< HEAD
     <%= form.label :service_id, t("orders_data.form.service"), style: "display: block" %>
     <% options = Service.all.map { |d| [I18n.exists?("index.home.services_titles.#{d.title.parameterize.underscore}", locale: :uk) ? t("index.home.services_titles.#{d.title.parameterize.underscore}") : d.title, d.id] } %>
     <%= form.select :service_id, options_for_select(options, prompt: 'Select service'), {}, class: 'form-text-field', style: "width: 300px;" %>
@@ -58,15 +44,6 @@
   <div class="field mt">
     <%= form.label :price, t("orders_data.form.price"), style: "display: block" %>
     <%= form.number_field :price, class: 'form-text-field', step: 'any', min: 1, max: 1000000 %>
-=======
-    <%= form.label t("service"), style: "display: block" %>
-    <%= form.select :service_id, options_for_select(Service.all.map { |d| [d.title, d.id] }, prompt: 'Select service'), {}, class: 'form-text-field', style: "width: 300px;" %>
-  </div>
-
-  <div class="field mt">
-    <%= form.label t("price"), style: "display: block" %>
-    <%= form.number_field :price, class: 'form-text-field', min: 1, max: 1000000 %>
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
   </div>
 
   <%= form.hidden_field :client_profile_id, value: current_client.client_profile.id %>
@@ -74,11 +51,7 @@
   <%= form.hidden_field :status_id, value: Status.find_by(title: "Not Approved").id %>
 
   <div class="field mt">
-<<<<<<< HEAD
     <%= form.submit t('save'), class: 'button button-main' %>
-=======
-    <%= form.submit t("save"), class: 'button button-main' %>
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
   </div>
 <% end %>
 </div>

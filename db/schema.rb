@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema[7.1].define(version: 2024_04_21_142845) do
-=======
-ActiveRecord::Schema[7.1].define(version: 2024_04_25_121546) do
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
     t.text "body"
@@ -22,7 +18,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_25_121546) do
     t.integer "resource_id"
     t.string "author_type"
     t.integer "author_id"
-<<<<<<< HEAD
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["author_type", "author_id"], name: "index_active_admin_comments_on_author"
@@ -62,8 +57,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_25_121546) do
     t.string "city"
     t.string "street"
     t.string "build"
-=======
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["author_type", "author_id"], name: "index_active_admin_comments_on_author"
@@ -265,10 +258,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_25_121546) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-<<<<<<< HEAD
-=======
-  add_foreign_key "addresses", "client_profiles"
->>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
   add_foreign_key "client_likes", "client_profiles"
   add_foreign_key "client_likes", "services"
   add_foreign_key "client_profiles", "clients"
