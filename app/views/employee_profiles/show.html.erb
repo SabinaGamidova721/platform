@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <p style="color: green"><%= notice %></p>
+        <div class="user-card">
+            <div class="user-card-img">
+              <img src="<%= image_path('img2.jpg') %>" alt="Sorry, smth went wrong(((">
+            </div>
+            <%= render @employee_profile %>
+        </div>
+            <div class="mt-ls">
+<<<<<<< HEAD
+              <%= link_to t("client_profiles.edit.title"), edit_employee_registration_path, class: 'button button-yellow' %>
+              <%= link_to t("orders"), not_approved_orders_path(employee_profile_id: @employee_profile.id), class: 'button button-yellow'%>
+              <%= link_to t("back_to_main"), root_path, class: 'button button-yellow' %>
+=======
+              <%= link_to t("edit-profile-emp"), edit_employee_registration_path, class: 'button button-yellow' %>
+              <%= link_to t("show-my-orders"), not_approved_orders_path(employee_profile_id: @employee_profile.id), class: 'button button-yellow'%>
+              <%= link_to t("back-main-page"), root_path, class: 'button button-yellow' %>
+>>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
+            </div>
+    </div>
+      
+</body>
+</html>
+

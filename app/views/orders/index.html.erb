@@ -1,0 +1,60 @@
+<div class="container">
+<<<<<<< HEAD
+  <h2 class="title-lg mb"><%= t('orders') %></h2>
+=======
+  <h2 class="title-lg mb"><%= t("order.many") %></h2>
+>>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
+<p style="color: green"><%= notice %></p>
+
+<div id="orders">
+  <% @orders.each do |order| %>
+    <div class="user-card mt-ls">
+<<<<<<< HEAD
+
+      <div class="user-card-img">     
+        <div class="mt-md">
+          <% if order.avatar.attached? %>
+            <%= image_tag(order.avatar, width: "300", height: "200") %>
+          <% else %>
+            <img src="<%= image_path('question.jpg') %>" alt="Sorry, smth went wrong(((">
+          <% end %>
+        </div>
+      </div>
+
+=======
+>>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
+      <%= render order %>
+    </div>
+
+    <p class="mt">
+      <% if employee_signed_in? %>
+        <% if Status.find_by(id: order.status_id).title == "Not Approved" %>
+        <%= link_to "Approve", change_order_status_path(order_id: order.id), class: 'button button-main' %>
+        <% elsif Status.find_by(id: order.status_id).title == "Approved" %>
+          <%= link_to "In Progress", change_order_status_path(order_id: order.id), class: 'button button-main' %> 
+        <% elsif Status.find_by(id: order.status_id).title == "In Progress" %>
+          <%= link_to "Done", change_order_status_path(order_id: order.id), class: 'button button-yellow' %> 
+        <% end %>
+      <% end %>
+<<<<<<< HEAD
+      <%= link_to t('show_more'), order_path(order.id), class: 'button button-main' %>
+=======
+      <%= link_to t("show-order"), order_path(order.id), class: 'button button-main' %>
+>>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
+    </p>
+
+    <br/>
+  <% end %>
+</div>
+
+<div class="mt-ls">
+<<<<<<< HEAD
+    <%= link_to t('back'), :back, class: 'button button-yellow' %>
+    <%= link_to t('back_to_main'), root_path, class: 'button button-yellow' %>
+=======
+    <%= link_to t("back-to-profile"), :back, class: 'button button-yellow' %>
+    <%= link_to t("back-main-page"), root_path, class: 'button button-yellow' %>
+>>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
+</div>
+
+</div>

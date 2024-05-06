@@ -1,0 +1,67 @@
+<div id="<%= dom_id service %>">
+  <div class="mt-md">
+<<<<<<< HEAD
+    <strong><%= t('services_data.service.title') %>:</strong>
+    <% if I18n.locale == :uk %>
+      <%= I18n.t("index.home.services_titles.#{service.title.parameterize.underscore}") %>
+    <% else %>
+      <%= service.title %>
+    <% end %>
+  </div>
+
+  <div class="mt-sm mb-sm">
+    <strong><%= t('services_data.service_type_name') %>:</strong>
+    <% if I18n.locale == :uk %>
+      <%= I18n.t("index.home.services_types.#{service.service_type.parameterize.underscore}") %>
+    <% else %>
+      <%= service.service_type %>
+    <% end %>
+=======
+    <strong><%= t("title") %>:</strong>
+    <%= service.title %>
+  </div>
+
+  <div class="mt-sm mb-sm">
+    <strong><%= t("serv-type")%>:</strong>
+    <%= service.service_type %>
+>>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
+  </div>
+
+  <% if @service.present? && @service.difficulty.present? %>
+  <div class="mt-sm mb-sm">
+<<<<<<< HEAD
+    <strong><%= t('services_data.service.difficulty') %>:</strong>
+    <% if I18n.locale == :uk %>
+      <%= I18n.t("difficulty.difficulty_titles.#{@service.difficulty.title.parameterize.underscore}") %>
+    <% else %>
+      <%= @service.difficulty.title %>
+    <% end %>
+  </div>
+
+  <div class="mt-sm mb-sm">
+    <strong><%= t('services_data.service.who_created') %>:</strong>
+=======
+    <strong><%= t("difficulty")%>:</strong>
+    <%= @service.difficulty.title %>
+  </div>
+
+  <div class="mt-sm mb-sm">
+    <strong><%= t("creator")%>:</strong>
+>>>>>>> 8994db95e97503f998e933da9501c0c1b79165cb
+    <% if service.employee_profile_id.present? %>
+      <%= EmployeeProfile.find_by(id: service.employee_profile_id).last_name %>
+    <% else %>
+      Admin
+    <% end %>
+  </div>
+
+  <div class="mt-sm mb-sm">
+    <strong><%= t('services_data.service.description') %>:</strong>
+    <div class="mt-sm" style="width: 600px; height: 200px; overflow-x: auto; overflow-y: auto;">
+      <%= @service.description %>
+    </div>
+  </div>
+
+<% end %>
+
+</div>
